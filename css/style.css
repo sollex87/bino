@@ -7,7 +7,7 @@
 body {
   font-family: "Open Sans", sans-serif; }
 
-.buttons_Common {
+.buttons_Common, .contactContainerForm input:last-child {
   text-transform: uppercase;
   color: white;
   font-size: 14px;
@@ -33,6 +33,27 @@ h2 ~ p {
   font-size: 14px;
   font-weight: 400;
   line-height: 29px; }
+
+.breaker {
+  margin-top: 45px;
+  position: relative;
+  display: inline-block; }
+  .breaker__dot {
+    width: 8px;
+    height: 7px;
+    background-color: #e74c3c;
+    border-radius: 50%; }
+    .breaker__dot:before, .breaker__dot:after {
+      display: block;
+      content: "";
+      width: 80px;
+      border-bottom: 1px solid #cbc6c0;
+      position: absolute;
+      top: 50%; }
+    .breaker__dot:before {
+      left: -95px; }
+    .breaker__dot:after {
+      right: -95px; }
 
 .block {
   max-width: 1920px;
@@ -111,25 +132,6 @@ h2 ~ p {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 7.2px; }
-  .headerBreak {
-    margin-top: 45px;
-    position: relative; }
-    .headerBreak__dot {
-      width: 8px;
-      height: 7px;
-      background-color: #e74c3c;
-      border-radius: 50%; }
-      .headerBreak__dot:before, .headerBreak__dot:after {
-        display: block;
-        content: "";
-        width: 80px;
-        border-bottom: 1px solid #cbc6c0;
-        position: absolute;
-        top: 50%; }
-      .headerBreak__dot:before {
-        left: -95px; }
-      .headerBreak__dot:after {
-        right: -95px; }
   .header p {
     margin-top: 45px;
     display: block;
@@ -152,10 +154,10 @@ h2 ~ p {
     bottom: -30px; }
 
 .pros {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: 90px;
-  padding-bottom: 110px; }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .prosContainer {
+    padding-top: 90px;
+    padding-bottom: 110px;
     display: flex;
     justify-content: space-between; }
     .prosContainerItem {
@@ -238,6 +240,148 @@ h2 ~ p {
     .historyContainerContent a:hover {
       box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
       transform: scale(1.03); }
+
+.stats {
+  background: url("../img/stats/bg-stats.png") 50% 50% no-repeat;
+  background-size: cover;
+  color: white; }
+  .stats .wrapper {
+    padding-top: 160px;
+    padding-bottom: 140px; }
+  .statsContainer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; }
+    .statsContainerItem {
+      width: 20%;
+      margin-right: 30px; }
+      .statsContainerItem:last-child {
+        margin-right: 0; }
+      .statsContainerItem__icon {
+        display: inline-block;
+        width: 111px;
+        height: 111px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: relative; }
+        .statsContainerItem__icon img {
+          position: absolute;
+          display: inline-block;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0; }
+      .statsContainerItem p {
+        margin-top: 50px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.9px; }
+        .statsContainerItem p span {
+          font-size: 30px;
+          font-weight: 700;
+          letter-spacing: 1.5px; }
+
+.integration {
+  background-color: #f4f5f9; }
+  .integration .wrapper {
+    padding-top: 150px;
+    padding-bottom: 140px;
+    text-align: center; }
+  .integration p {
+    margin-top: 30px; }
+  .integrationContainer {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around; }
+    .integrationContainer img {
+      display: inline-block;
+      width: 210px;
+      height: 100%;
+      margin: 25px 5px 0 5px;
+      box-shadow: 0 1px 3px rgba(31, 31, 31, 0.09);
+      filter: grayscale(0.7);
+      opacity: 0.4;
+      transition: 0.1s ease-in-out;
+      cursor: pointer; }
+      .integrationContainer img:hover {
+        filter: grayscale(0);
+        opacity: 1;
+        box-shadow: 0 3px 9px 1px rgba(31, 31, 31, 0.3); }
+
+.contact {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f4f5f9; }
+  .contact .wrapper {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px; }
+  .contactContainer {
+    margin-top: 70px; }
+    .contactContainerInfo {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 100px;
+      width: 40%;
+      background: white;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); }
+      .contactContainerInfo p {
+        text-align: left;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #6a6a6a; }
+        .contactContainerInfo p a {
+          text-decoration: none;
+          color: #6a6a6a; }
+        .contactContainerInfo p span {
+          display: inline-block;
+          font-size: 24px;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #e74c3c;
+          margin-bottom: 30px; }
+        .contactContainerInfo p:not(:first-child) {
+          margin-top: 70px; }
+    .contactContainerForm {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 100px;
+      width: 55%;
+      background: white;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      vertical-align: top;
+      text-align: left; }
+      .contactContainerForm input:not(:last-child) {
+        display: inline-block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #cbc6c0;
+        background: transparent;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        color: #6a6a6a;
+        line-height: 44px; }
+      .contactContainerForm textarea {
+        width: 100%;
+        height: 200px;
+        border: none;
+        border-bottom: 1px solid #cbc6c0;
+        background: transparent;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        color: #6a6a6a;
+        line-height: 44px;
+        resize: none; }
+      .contactContainerForm input:last-child {
+        display: block; }
 
 .footer {
   background: url("../img/footer/bg.png") 50% 50% no-repeat;
