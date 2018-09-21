@@ -7,7 +7,7 @@
 body {
   font-family: "Open Sans", sans-serif; }
 
-.buttons_Common, .contactContainerForm input:last-child {
+.buttons_Common {
   text-transform: uppercase;
   color: white;
   font-size: 14px;
@@ -236,7 +236,7 @@ h2 ~ p {
 
 .historyContainerPlayer {
   display: inline-block;
-  width: calc((100% - 82px)/2);
+  width: calc((100% - 82px) / 2);
   margin-right: 75px; }
   .historyContainerPlayer img {
     width: 100%;
@@ -244,7 +244,7 @@ h2 ~ p {
 
 .historyContainerContent {
   display: inline-block;
-  width: calc((100% - 82px)/2);
+  width: calc((100% - 82px) / 2);
   vertical-align: top; }
   .historyContainerContent h2:before {
     display: inline-block;
@@ -263,6 +263,68 @@ h2 ~ p {
     .historyContainerContent a:hover {
       box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
       transform: scale(1.03); }
+
+.services {
+  background-color: #202020;
+  display: flex; }
+  .servicesContent {
+    text-align: right;
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 80px;
+    padding-bottom: 150px;
+    box-sizing: border-box; }
+    .servicesContent h2 {
+      margin-top: 155px;
+      color: white; }
+      .servicesContent h2:after {
+        display: inline-block;
+        vertical-align: -6px;
+        content: "";
+        height: 36px;
+        width: 6px;
+        background: #e74c3c;
+        margin-left: 30px; }
+    .servicesContentItem {
+      position: relative; }
+      .servicesContentItem h4 {
+        color: #e74c3c;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 29px;
+        text-transform: uppercase;
+        margin-top: 70px; }
+      .servicesContentItem p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 29px;
+        color: #6a6a6a; }
+      .servicesContentItem__img {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+        right: -112px;
+        top: 0; }
+        .servicesContentItem__img img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto; }
+  .servicesImage {
+    content: "";
+    width: 40%;
+    background: url("../img/services/services.png") 50% 50% no-repeat;
+    background-size: cover; }
+
+.works {
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 70px; }
 
 .stats {
   background: url("../img/stats/bg-stats.png") 50% 50% no-repeat;
@@ -306,6 +368,76 @@ h2 ~ p {
           font-weight: 700;
           letter-spacing: 1.5px; }
 
+.pricing .wrapper {
+  padding-top: 155px;
+  padding-bottom: 145px;
+  text-align: center; }
+
+.pricingContainer {
+  display: table;
+  font-family: "Open Sans";
+  width: 100%;
+  border-spacing: 15px;
+  margin-top: 70px; }
+  .pricingContainerItem {
+    display: table-cell;
+    position: relative;
+    filter: grayscale(1);
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+    width: 30%;
+    padding-bottom: 135px;
+    background-color: #f4f5f9;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px; }
+    .pricingContainerItem:hover {
+      filter: grayscale(0);
+      opacity: 1; }
+    .pricingContainerItem__name {
+      box-sizing: border-box;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: white;
+      background: #e74c3c;
+      height: 205px;
+      padding-top: 50px;
+      margin-bottom: 125px; }
+    .pricingContainerItem__price {
+      font-family: "Source Sans Pro";
+      box-sizing: border-box;
+      font-size: 13px;
+      font-weight: 400;
+      color: black;
+      background: white;
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);
+      position: absolute;
+      top: 128px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding-top: 45px; }
+      .pricingContainerItem__price span {
+        font-size: 40px;
+        font-weight: 700;
+        color: #e74c3c; }
+    .pricingContainerItem a {
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: #e74c3c;
+      width: 145px;
+      box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25); }
+      .pricingContainerItem a:hover {
+        transform: scale(1.02); }
+
 .integration {
   background-color: #f4f5f9; }
   .integration .wrapper {
@@ -345,14 +477,17 @@ h2 ~ p {
     padding-top: 150px;
     padding-bottom: 150px; }
   .contactContainer {
-    margin-top: 70px; }
+    display: table;
+    margin-top: 70px;
+    border-spacing: 30px;
+    width: 100%; }
     .contactContainerInfo {
-      display: inline-block;
+      display: table-cell;
       box-sizing: border-box;
       padding: 100px;
-      width: 40%;
       background: white;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); }
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      width: 40%; }
       .contactContainerInfo p {
         text-align: left;
         font-family: "Open Sans";
@@ -373,14 +508,11 @@ h2 ~ p {
         .contactContainerInfo p:not(:first-child) {
           margin-top: 70px; }
     .contactContainerForm {
-      display: inline-block;
-      box-sizing: border-box;
+      display: table-cell;
       padding: 100px;
-      width: 55%;
       background: white;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-      vertical-align: top;
-      text-align: left; }
+      width: 100%; }
       .contactContainerForm input:not(:last-child) {
         display: inline-block;
         width: 100%;
@@ -391,10 +523,11 @@ h2 ~ p {
         font-size: 14px;
         font-weight: 400;
         color: #6a6a6a;
-        line-height: 44px; }
+        line-height: 44px;
+        margin-top: 20px; }
       .contactContainerForm textarea {
         width: 100%;
-        height: 200px;
+        height: 150px;
         border: none;
         border-bottom: 1px solid #cbc6c0;
         background: transparent;
@@ -405,7 +538,18 @@ h2 ~ p {
         line-height: 44px;
         resize: none; }
       .contactContainerForm input:last-child {
-        display: block; }
+        display: block;
+        vertical-align: bottom;
+        width: 160px;
+        background: #e74c3c;
+        line-height: 44px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+        transition: 0.2s ease-in-out;
+        margin-top: 30px; }
+        .contactContainerForm input:last-child:hover {
+          transform: scale(1.02); }
 
 .footer {
   background: url("../img/footer/bg.png") 50% 50% no-repeat;
