@@ -137,7 +137,7 @@ h2 ~ p {
         font-size: 14px;
         font-weight: 400;
         text-transform: uppercase;
-        margin-right: 3vw;
+        margin-right: 60px;
         border: 1px solid transparent; }
         .headerTop__menu a:last-child {
           margin-right: 0; }
@@ -188,8 +188,6 @@ h2 ~ p {
       width: 20%;
       text-align: center;
       color: #6a6a6a; }
-      .prosContainerItem:hover {
-        transform: scale(1.02); }
       .prosContainerItem:hover .prosContainerItem__logo {
         border: 1px solid #e74c3c;
         transform: rotate(45deg); }
@@ -325,6 +323,22 @@ h2 ~ p {
   text-align: center;
   padding-top: 140px;
   padding-bottom: 70px; }
+  .worksNavigation {
+    margin-top: 70px; }
+    .worksNavigation__radio {
+      display: none; }
+    .worksNavigation__item {
+      display: inline-block;
+      font-family: "Open Sans";
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase; }
+      .worksNavigation__item-active {
+        color: red; }
+      .worksNavigation__item:not(:last-child)::after {
+        content: '/';
+        margin: 0 10px;
+        color: black; }
 
 .stats {
   background: url("../img/stats/bg-stats.png") 50% 50% no-repeat;
@@ -539,7 +553,6 @@ h2 ~ p {
         resize: none; }
       .contactContainerForm input:last-child {
         display: block;
-        vertical-align: bottom;
         width: 160px;
         background: #e74c3c;
         line-height: 44px;
