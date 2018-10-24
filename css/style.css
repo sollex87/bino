@@ -325,20 +325,25 @@ h2 ~ p {
   padding-bottom: 70px; }
   .worksNavigation {
     margin-top: 70px; }
-    .worksNavigation__radio {
+    .worksNavigation input {
       display: none; }
     .worksNavigation__item {
       display: inline-block;
       font-family: "Open Sans";
       font-size: 14px;
       font-weight: 400;
-      text-transform: uppercase; }
-      .worksNavigation__item-active {
-        color: red; }
-      .worksNavigation__item:not(:last-child)::after {
-        content: '/';
-        margin: 0 10px;
-        color: black; }
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.2s ease-in-out; }
+    .worksNavigation label:not(:last-child) p::after {
+      content: '/';
+      margin: 0 10px;
+      color: black; }
+    .worksNavigation label input:checked + p {
+      color: red;
+      transform: scale(1.05); }
+    .worksNavigation__item:hover {
+      transform: scale(1.05); }
 
 .stats {
   background: url("../img/stats/bg-stats.png") 50% 50% no-repeat;

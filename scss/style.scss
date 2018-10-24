@@ -345,7 +345,6 @@ h2 ~ p {
     }
     &Item {
       position: relative;
-      //max-width: 560px;
       h4 {
         color: #e74c3c;
         font-size: 18px;
@@ -394,7 +393,7 @@ h2 ~ p {
   padding-bottom: 70px;
   &Navigation {
     margin-top: 70px;
-    &__radio{
+    & input{
       display: none;
     }
     &__item{
@@ -403,14 +402,20 @@ h2 ~ p {
       font-size: 14px;
       font-weight: 400;
       text-transform: uppercase;
-      &-active {
-        color: red;
-      }
-      &:not(:last-child)::after{
-        content: '/';
-        margin: 0 10px;
-        color: black;
-      }
+      cursor: pointer;
+      transition: 0.2s ease-in-out
+    }
+    & label:not(:last-child) p::after{
+      content: '/';
+      margin: 0 10px;
+      color: black;
+    }
+    & label input:checked + p{
+      color: red;
+      transform: scale(1.05);
+    }
+    &__item:hover{
+      transform: scale(1.05);
     }
   }
 }
