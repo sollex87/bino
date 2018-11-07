@@ -390,7 +390,6 @@ h2 ~ p {
 .works {
   text-align: center;
   padding-top: 140px;
-  padding-bottom: 70px;
   &Navigation {
     margin-top: 70px;
     & input{
@@ -417,6 +416,75 @@ h2 ~ p {
     &__item:hover{
       transform: scale(1.05);
     }
+  }
+  &Container{
+    box-sizing: border-box;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.5s ease-in-out;
+    &Item{
+      width: 25%;
+      position: relative;
+      transition: 0.5s ease-in-out;
+      img{
+        display: block;
+        width:100%;
+        height: auto;
+        margin-bottom: -1px;
+      }
+      &__content{
+        transition: 0.5s ease-in-out;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+        img{
+          width: 100%;
+          height: auto;
+          z-index: 1;
+        }
+        p{
+          position: absolute;
+          bottom: 10%;
+          left: 10%;
+          color: white;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          text-align: left;
+          span{
+            display: block;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 1.2px;
+            margin-bottom: 20px;
+          }
+          &::before{
+            content: '';
+            display: block;
+            width: 44px;
+            height: 4px;
+            background: white;
+            margin-bottom: 30px;
+          }
+        }
+      }
+      &:hover &__content{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.case-study{
+  text-align: center;
+  background-color: #f4f5f9;
+  .wrapper{
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
 
@@ -589,6 +657,38 @@ h2 ~ p {
   }
 }
 
+.blog{
+  padding-top: 120px;
+  text-align: center;
+  &Container{
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+      &Item{
+        display: flex;
+        width: 50%;
+        &__image{
+          width: 50%;
+          img{
+            display: block;
+          }
+        }
+        &__content{
+          .arrow{
+            border-right: 30px solid black;
+            border-bottom: 35px solid transparent;
+            border-top: 35px solid transparent;
+            &-left{
+
+            }
+          }
+          width: 50%;
+          background-color: #e74e3e;
+        }
+      }
+  }
+}
+
 .contact {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f4f5f9;
@@ -635,7 +735,6 @@ h2 ~ p {
     }
     &Form {
       display: table-cell;
-      //margin-left: 30px;
       padding: 100px;
       background: white;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
