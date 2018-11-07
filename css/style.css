@@ -556,16 +556,62 @@ h2 ~ p {
       display: flex;
       width: 50%; }
       .blogContainerItem__image {
-        width: 50%; }
-        .blogContainerItem__image img {
-          display: block; }
-      .blogContainerItem__content {
         width: 50%;
-        background-color: #e74e3e; }
+        overflow: hidden; }
+        .blogContainerItem__image img {
+          display: block;
+          height: 100%;
+          width: auto; }
+      .blogContainerItem__content {
+        position: relative;
+        width: 50%;
+        background-color: #e74e3e;
+        box-sizing: border-box;
+        padding: 50px;
+        color: white;
+        text-align: left;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.7px; }
+        .blogContainerItem__content h4 {
+          font-family: "Source Sans Pro", sans-serif;
+          font-size: 24px;
+          text-transform: uppercase;
+          letter-spacing: 1.2px;
+          font-weight: 400;
+          margin-top: 30px; }
+          .blogContainerItem__content h4::after {
+            content: '';
+            display: block;
+            width: 44px;
+            height: 4px;
+            background: white;
+            margin-top: 20px; }
+        .blogContainerItem__content h4 + p {
+          font-size: 16px;
+          line-height: 30px;
+          margin-top: 50px; }
+        .blogContainerItem__content a {
+          display: block;
+          font-size: 18px;
+          font-style: italic;
+          font-weight: 500;
+          text-decoration: none;
+          color: white;
+          margin-top: 55px; }
         .blogContainerItem__content .arrow {
-          border-right: 30px solid black;
+          top: 45%;
+          position: absolute;
+          width: 0;
+          height: 0;
           border-bottom: 35px solid transparent;
           border-top: 35px solid transparent; }
+          .blogContainerItem__content .arrow-left {
+            left: -30px;
+            border-right: 30px solid #e74e3e; }
+          .blogContainerItem__content .arrow-right {
+            right: -30px;
+            border-left: 30px solid #e74e3e; }
 
 .contact {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
