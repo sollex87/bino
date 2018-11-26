@@ -169,6 +169,44 @@ h2 ~ p {
         }
       }
     }
+    &BurgerMenu{
+      display: none;
+      position: relative;
+      & input{
+        display: none;
+        &:checked ~ .headerTopBurgerMenu__list{
+          display: block;
+        }
+      }
+      &__icon div{
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin-top: 6px;
+        border-radius: 5px;
+      }
+      &__list{
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 50px;
+        & a{
+          display: block;
+          box-sizing: border-box;
+          line-height: 4;
+          color: white;
+          font-size: 14px;
+          font-weight: 400;
+          padding: 0 15px;
+          text-transform: uppercase;
+          background-color: rgba(100, 100, 100, 1);
+          &:hover {
+            color: black;
+            background-color: rgba(255, 255, 255, 1);
+          }
+        }
+      } 
+    }
   }
   h3 {
     margin-top: 235px;
@@ -268,7 +306,6 @@ h2 ~ p {
         margin-top: 15px;
         font-family: "Source Sans Pro";
         font-size: 12px;
-        //font-weight: bold;
         line-height: 20px;
         letter-spacing: 0.9px;
       }
@@ -967,5 +1004,17 @@ h2 ~ p {
     width: 56px;
     border-radius: 50%;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1060px){
+  .headerTopBurgerMenu{
+    display: block;
+  }
+  .headerTop__menu{
+    display: none;
+  }
+  .blogContainerItem{
+    width: 100%;
   }
 }
