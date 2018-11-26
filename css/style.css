@@ -432,6 +432,16 @@ h2 ~ p {
   .case-study .wrapper {
     padding-top: 150px;
     padding-bottom: 150px; }
+  .case-study .first {
+    width: 50%;
+    margin-left: 50%;
+    background: black;
+    padding: 50px 0; }
+  .case-study .second {
+    width: 110%;
+    position: relative;
+    left: -100%;
+    background: red; }
 
 .stats {
   background: url("../img/stats/bg-stats.png") 50% 50% no-repeat;
