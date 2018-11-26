@@ -2,3 +2,5 @@ node_modules
 .idea
 gulpfile.js
 .code-workspace
+.cache
+dist

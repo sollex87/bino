@@ -549,14 +549,48 @@ h2 ~ p {
   text-align: center;
   background: url("../img/team/team-bg.png") 50% 50% no-repeat;
   padding-top: 150px;
-  height: 1500px; }
+  height: 744px; }
   .team h2 {
     color: white; }
   .team h2 + p {
     color: white; }
-  .teamTint {
-    width: 100%;
-    height: 500px; }
+  .teamMain {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 100px; }
+    .teamMain__item {
+      margin-top: 5%;
+      color: white; }
+      .teamMain__item p {
+        visibility: hidden;
+        margin-top: 100px;
+        position: relative; }
+        .teamMain__item p::before {
+          content: "";
+          display: block;
+          height: 70px;
+          border-left: 1px solid white;
+          position: absolute;
+          top: -180%;
+          left: 50%; }
+        .teamMain__item p span {
+          font-weight: bold;
+          color: #e74c3c;
+          font-size: 20px;
+          margin-bottom: 20px; }
+      .teamMain__item img {
+        width: 70px;
+        height: 70px;
+        border: 5px solid #e74c3c;
+        border-radius: 50%;
+        transition: 0.2s ease-in-out; }
+        .teamMain__item img:hover {
+          transform: scale(1.2); }
+        .teamMain__item img:hover + p {
+          visibility: visible; }
 
 .blog {
   padding-top: 120px;
