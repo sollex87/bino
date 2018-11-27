@@ -739,10 +739,11 @@ h2 ~ p {
 }
 
 .team {
+  box-sizing: border-box;
   text-align: center;
   background: url('../img/team/team-bg.png') 50% 50% no-repeat;
+  background-size: cover;
   padding-top: 150px;
-  height: 744px;
   h2{
     color: white;
   }

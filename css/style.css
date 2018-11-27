@@ -614,10 +614,11 @@ h2 ~ p {
         box-shadow: 0 3px 9px 1px rgba(31, 31, 31, 0.3); }
 
 .team {
+  box-sizing: border-box;
   text-align: center;
   background: url("../img/team/team-bg.png") 50% 50% no-repeat;
-  padding-top: 150px;
-  height: 744px; }
+  background-size: cover;
+  padding-top: 150px; }
   .team h2 {
     color: white; }
   .team h2 + p {
