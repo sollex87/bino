@@ -528,20 +528,42 @@ h2 ~ p {
     width: 50%;
     margin-left: 50%;
     background: url('../img/case-study/photo.png') 50% 50%;
+    background-size: cover;
     padding: 50px 0;
     box-shadow: 0 0 10px rgba(120,120,120, 0.5);
     &Item{
+      color: #6a6a6a;
       width: 110%;
       position: relative;
       left: -100%;
       background: white;
       box-shadow: 0 0 10px rgba(120,120,120, 0.1);
-      &__icon{
-        width: 90px;
-        height: 90px;
-        // transform: rotate(45deg);
+      box-sizing: border-box;
+      padding: 80px 60px 50px 60px;
+      text-align: center;
+      & h4{
+        margin-top: 50px;
+        text-transform: uppercase;
+        letter-spacing: 1.5;
+        font-size: 1.2em;
+      }
+      &__breaker {
+        display: inline-block;
+        margin-top: 30px;
+        width: 40px;
+        border: 1px solid #6a6a6a;
+      }
+      & p{
+        margin-top: 30px;
+      }
+      & a {
+        display: inline-block;
         background: #e74c3c;
-        color: white;
+        margin-top: 50px;
+        &:hover {
+          box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+          transform: scale(1.03);
+        }
       }
     }
   }
